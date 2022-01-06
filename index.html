@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kasper | Template Two</title>
+    <!-- Bootstrap icons  -->
+    <link rel="stylesheet" href="css/bootstrap-icons.css" />
+    <!-- Render elements normally on all browsers  -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Main CSS File  -->
+    <link rel="stylesheet" href="css/kasper.css" />
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- /* Start Header  */ -->
+    <header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="img/logo.png" alt="Logo" />
+        </a>
+        <nav>
+          <i class="bi bi-list toggle-menu"></i>
+          <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="form">
+            <i class="bi bi-search"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- /* End Header  */ -->
+
+    <!-- Start Landing  -->
+    <div class="landing" id="landing">
+      <div class="overlay"></div>
+      <div class="text">
+        <div class="content">
+          <h2>
+            Hello World!<br />
+            We Are Kasper We Make Art.
+          </h2>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+            Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem.
+            Mauris blandit aliquet elit, eget tincidunt.
+          </p>
+        </div>
+      </div>
+      <div class="change-left" onclick="changeLanding(1);">
+        <i class="bi bi-chevron-left change-background left"></i>
+      </div>
+      <div class="change-right" onclick="changeLanding(0);">
+        <i class="bi bi-chevron-right change-background right"></i>
+      </div>
+
+      <ul class="bullets">
+        <li class="active bullet" onclick="changeLandingbullet(0)"></li>
+        <li class="bullet" onclick="changeLandingbullet(1)"></li>
+        <li class="bullet" onclick="changeLandingbullet(2)"></li>
+      </ul>
+    </div>
+    <!-- End Landing  -->
+    <!-- Start Services  -->
+    <div class="services">
+      <div class="container">
+        <div class="main-heading">
+          <h2>Services</h2>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+            Mauris blandit aliquet elit, eget tincidunt.
+          </p>
+        </div>
+        <div class="services-content">
+          <div class="srv-box">
+            <i class="bi bi-display"></i>
+            <div class="text">
+              <h3>Vorem amet intuitive</h3>
+              <p>
+                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                Curabitur aliquet quam.
+              </p>
+            </div>
+          </div>
+          <div class="srv-box">
+            <i class="bi bi-gear-fill"></i>
+            <div class="text">
+              <h3>Vorem amet intuitive</h3>
+              <p>
+                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                Curabitur aliquet quam..
+              </p>
+            </div>
+          </div>
+          <div class="srv-box">
+            <i class="bi bi-rulers"></i>
+            <div class="text">
+              <h3>Vorem amet intuitive</h3>
+              <p>
+                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                Curabitur aliquet quam.
+              </p>
+            </div>
+          </div>
+          <div class="srv-box">
+            <i class="bi bi-camera-fill"></i>
+            <div class="text">
+              <h3>Vorem amet intuitive</h3>
+              <p>
+                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                Curabitur aliquet quam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Services  -->
+
+    <!-- Start Design  -->
+    <div class="design">
+      <div class="image">
+        <img src="img/mobile.png" alt="Mobile" />
+      </div>
+      <div class="text">
+        <h2>Our Design Comes With...</h2>
+        <ul>
+          <li>Responsive Design</li>
+          <li>Modern And Clean Design</li>
+          <li>Clean Code</li>
+          <li>Browser Friendly</li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Design  -->
+
+    <!-- Start Portfolio  -->
+    <div class="portfolio">
+      <div class="container">
+        <div class="main-heading">
+          <h2>Portfolio</h2>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+            Mauris blandit aliquet elit, eget tincidunt.
+          </p>
+        </div>
+        <ul class="shuffle">
+          <li id="all" class="active" onclick="filterProjects(0);">All</li>
+          <li id="apps" onclick="filterProjects(1);">Apps</li>
+          <li id="photos" onclick="filterProjects(2);">Photos</li>
+          <li id="web" onclick="filterProjects(3);">Web</li>
+          <li id="print" onclick="filterProjects(4);">Print</li>
+        </ul>
+      </div>
+      <div class="imgs-container">
+        <div class="box">
+          <img src="img/shuffle-01.jpg" alt="A Project" />
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p>Photography</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img/shuffle-02.jpg" alt="A Project" />
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p>Photography</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img/shuffle-03.jpg" alt="A Project" />
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p>Photography</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img/shuffle-04.jpg" alt="A Project" />
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p>Photography</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img/shuffle-05.jpg" alt="A Project" />
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p>Photography</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img/shuffle-06.jpg" alt="A Project" />
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p>Photography</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img/shuffle-07.jpg" alt="A Project" />
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p>Photography</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img/shuffle-08.jpg" alt="A Project" />
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p>Photography</p>
+          </div>
+        </div>
+      </div>
+      <a target="_blank" href="https://www.facebook.com/KeRoRiv" class="more"
+        >More</a
+      >
+    </div>
+    <!-- End Portfolio  -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="mybtnn bi bi-arrow-up"></i>
+    </button>
+    <script>
+      var landings = ["landing.jpg", "landing2.jpg", "landing3.jpg"];
+      var bullets = document.getElementsByClassName("bullet");
+      var count = 0;
+
+      // To Make the bg change every 7.5s
+      setInterval(changeLanding, 7500);
+      function changeLanding(x = 0) {
+        bullets[count].classList.remove("active");
+        x == 0 ? count++ : count--;
+        if (count == 3) {
+          count = 0;
+        } else if (count == -1) count = 2;
+        let mylanding = document.getElementById("landing");
+        mylanding.style.background = `url(img/${landings[count]})`;
+        mylanding.style.backgroundSize = "cover";
+        bullets[count].classList.add("active");
+      }
+      // To Change the active bullet
+      function changeLandingbullet(x) {
+        bullets[count].classList.remove("active");
+        count = x;
+        let mylanding = document.getElementById("landing");
+        mylanding.style.background = `url(img/${landings[count]})`;
+        mylanding.style.backgroundSize = "cover";
+        bullets[count].classList.add("active");
+      }
+
+      // Scroll Top Button
+      var mybutton = document.getElementById("myBtn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+      // Shuffle Filter
+      var projects = document.getElementsByClassName("box");
+      var current = "all";
+      console.log(projects);
+      function filterProjects(x) {
+        document.getElementById(current).classList.remove("active");
+        switch (x) {
+          case 0:
+            for (let i = 0; i < projects.length; i++) {
+              projects[i].style.display = "block";
+            }
+            document.getElementById("all").classList.add("active");
+            current = "all";
+            break;
+          case 1:
+            for (let i = 0; i < projects.length; i++) {
+              if (i > 3) {
+                projects[i].style.display = "block";
+              } else {
+                projects[i].style.display = "none";
+              }
+            }
+            document.getElementById("apps").classList.add("active");
+            current = "apps";
+            break;
+          case 2:
+            for (let i = 0; i < projects.length; i++) {
+              if (i % 2 == 0) {
+                projects[i].style.display = "block";
+              } else {
+                projects[i].style.display = "none";
+              }
+            }
+            document.getElementById("photos").classList.add("active");
+            current = "photos";
+            break;
+          case 3:
+            for (let i = 0; i < projects.length; i++) {
+              if (i % 2 != 0) {
+                projects[i].style.display = "block";
+              } else {
+                projects[i].style.display = "none";
+              }
+            }
+            document.getElementById("web").classList.add("active");
+            current = "web";
+            break;
+          case 4:
+            for (let i = 0; i < projects.length; i++) {
+              if (i < 4) {
+                projects[i].style.display = "block";
+              } else {
+                projects[i].style.display = "none";
+              }
+            }
+            document.getElementById("print").classList.add("active");
+            current = "print";
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
